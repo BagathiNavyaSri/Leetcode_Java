@@ -21,7 +21,7 @@ class Solution {
             for(int col = 0; col < nc; col++){
                 if(board[row][col] == 'O'){
                     board[row][col] = 'X';
-                }else if(board[row][col] == '1'){
+                }else if(board[row][col] == 'V'){
                     board[row][col] = 'O';
                 }
             }
@@ -32,7 +32,7 @@ class Solution {
         if(row < 0 || row > nr-1 || col < 0 || col > nc-1 || board[row][col] != 'O'){
             return;
         }
-        board[row][col] = '1';
+        board[row][col] = 'V';
         dfs(board, row, col-1); //left
         dfs(board, row, col+1); //right
         dfs(board, row-1, col); //top
