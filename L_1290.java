@@ -10,13 +10,24 @@
  */
 class Solution {
     public int getDecimalValue(ListNode head) {
-        ListNode temp = head;
-        StringBuilder sb = new StringBuilder();
-        while(temp != null){
-            sb.append(temp.val);
-            temp = temp.next;
+        int res = 0;
+        while(head != null){
+            res = (res*2) + head.val;  
+            head = head.next;
         }
-        int decimal_val = Integer.parseInt(sb.toString(), 2);
-        return decimal_val;
+        return res;
     }
 }
+
+// class Solution {
+//     public int getDecimalValue(ListNode head) {
+//         ListNode temp = head;
+//         StringBuilder sb = new StringBuilder();
+//         while(temp != null){
+//             sb.append(temp.val);
+//             temp = temp.next;
+//         }
+//         int decimal_val = Integer.parseInt(sb.toString(), 2);
+//         return decimal_val;
+//     }
+// }
