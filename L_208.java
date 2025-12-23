@@ -44,6 +44,52 @@ class Trie {
     }
 }
 
+// class Trie {
+//     class TrieNode{
+//         Map<Character, TrieNode> children;
+//         boolean wordEnd;
+
+//         public TrieNode(){
+//             children = new HashMap<>();
+//             wordEnd = false;
+//         }
+//     }
+
+//     TrieNode root;
+//     public Trie() {
+//         //creation of root node
+//         root = new TrieNode();
+//     }
+    
+//     public void insert(String word) {
+//         TrieNode currNode = root;
+//         for(char ch : word.toCharArray()){
+//             currNode.children.putIfAbsent(ch, new TrieNode());
+//             currNode = currNode.children.get(ch);
+//         }
+//         currNode.wordEnd = true;
+//     }
+    
+//     public boolean search(String word) {
+//         TrieNode currNode = root;
+//         for(char ch : word.toCharArray()){
+//             if(!currNode.children.containsKey(ch)) return false;
+//             currNode = currNode.children.get(ch);
+//         }
+//         return currNode.wordEnd;
+//     }
+    
+//     public boolean startsWith(String prefix) {
+//         TrieNode currNode = root;
+//         for(char ch : prefix.toCharArray()){
+//             if(!currNode.children.containsKey(ch)) return false;
+//             currNode = currNode.children.get(ch);
+//         }
+//         return true;
+//     }
+// }
+
+
 /**
  * Your Trie object will be instantiated and called as such:
  * Trie obj = new Trie();
