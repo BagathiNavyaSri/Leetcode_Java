@@ -1,6 +1,7 @@
 class Solution {
     public static void sortColors(int[] nums) {
         //DUTCH NATIONAL FLAG ALGORITHM
+        //The Dutch National Flag (DNF) Algorithm is a three-way partitioning technique designed to sort an array containing exactly three distinct types of elements in a single pass
         int n = nums.length;
          int low = 0, mid = 0, high = n - 1;
         while (mid <= high) {
